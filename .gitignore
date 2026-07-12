@@ -19,3 +19,6 @@ vite.config.d.ts
 
 # local Claude Code session assets (skills, settings)
 .claude/
+
+.vercel
+.env*
