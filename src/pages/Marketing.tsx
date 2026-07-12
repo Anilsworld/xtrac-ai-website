@@ -14,8 +14,10 @@ import { Pricing } from '@/components/sections/Pricing'
 import { Faq } from '@/components/sections/Faq'
 import { CTA } from '@/components/sections/CTA'
 import { Footer } from '@/components/sections/Footer'
+import { useSeo } from '@/lib/seo'
 
 export function Marketing() {
+  useSeo({ path: '/' })
   return (
     <>
       <Nav />

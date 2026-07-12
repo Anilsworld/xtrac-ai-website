@@ -1,0 +1,42 @@
+# xTrac AI — https://xtrac.app
+# All crawlers welcome, including AI agents and answer engines.
+# Machine-readable site summary for LLMs: https://xtrac.app/llms.txt
+
+User-agent: *
+Allow: /
+
+# AI / answer-engine crawlers (explicitly allowed)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+Sitemap: https://xtrac.app/sitemap.xml

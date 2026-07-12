@@ -1,6 +1,7 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import type { ReactNode } from 'react'
+import { useSeo } from '@/lib/seo'
 import { Button } from '@/components/ui/button'
 import { Icon, ThemeToggle, BrandMark } from '@/components/primitives'
 import { Footer } from '@/components/sections/Footer'
@@ -67,6 +68,12 @@ interface PageShellProps {
 /** Standard sub-page: solid nav → aurora header band → content → footer.
  *  Scrolls to top on mount so navigating between pages always starts at top. */
 export function PageShell({ eyebrow, eyebrowIcon, title, subtitle, meta, children }: PageShellProps) {
+  const { pathname } = useLocation()
+  useSeo({
+    title: typeof title === 'string' ? title : eyebrow,
+    description: typeof subtitle === 'string' ? subtitle : undefined,
+    path: pathname,
+  })
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])

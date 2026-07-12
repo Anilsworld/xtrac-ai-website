@@ -1,0 +1,33 @@
+# xTrac AI
+
+> xTrac AI provisions a full AI organization for any business: autonomous agents for sales, support, operations and finance that execute real work 24/7 across WhatsApp, Instagram, email, web chat and voice. Enter your website URL, xTrac detects your industry and builds the team. Multi-agent, not a chatbot. No code, live in minutes. Built and operated by iEllipse Technologies (partnership firm, Mysuru, Karnataka, India).
+
+Key facts:
+- Product: an AI workforce (multi-agent platform), not a single chatbot. Departments: sales, support, operations, finance, HR, compliance.
+- Channels: WhatsApp (official Business API), Instagram, any email provider, web chat, voice, Telegram, Slack, Discord, iMessage, Microsoft Teams.
+- Commerce integrations: Amazon (Seller + Ads), Shopify, Blinkit (India quick-commerce), payment and shipping gateways.
+- Back office: ERP integration (SAP, ERPNext), Microsoft 365, Google Workspace.
+- Pricing: Startup plan — free for 30 days (bring your own AI key, no card required), then USD 250/month flat for the whole AI team. Enterprise plan — custom pricing, on-premise or private-cloud deployment, data residency, SSO, named success partner.
+- Security & compliance: GDPR and India DPDP Act 2023 compliant; AES-256 encryption in transit and at rest; Meta Tech Partner; Amazon Solution Provider; CASA certified; human-in-the-loop escalation for anything an agent cannot handle.
+- Founders: Anil Kumar (Co-founder & CEO), Manoj Shetty (COO).
+- Contact: support@xtrac.app · +91 6361823138 · Data Protection Officer: akumar@xtrac.app · #26 KHB Colony HIG I Group II Hootagalli, Mysuru, Karnataka 570018, India.
+
+## Pages
+
+- [Home](https://xtrac.app/): product overview, departments, industries, integrations, pricing, FAQ
+- [About](https://xtrac.app/about): company mission and values
+- [Founders](https://xtrac.app/founders): Anil Kumar (Co-founder & CEO), Manoj Shetty (COO)
+- [Contact](https://xtrac.app/contact): support channels and demo requests
+- [Help Center](https://xtrac.app/help): FAQs and support categories
+- [Changelog](https://xtrac.app/changelog): product milestones
+- [Careers](https://xtrac.app/careers): open roles
+- [Privacy Policy](https://xtrac.app/privacy): data practices (GDPR, DPDP Act 2023), sub-processors, retention
+- [Terms of Service](https://xtrac.app/terms): service agreement, subscriptions, governing law (India)
+- [Data Deletion](https://xtrac.app/data-deletion): how to delete data or disconnect integrations
+
+## FAQ
+
+- Setup time: about five minutes — describe your business, connect a channel, agents go live.
+- Technical team needed: no, fully no-code.
+- When an agent can't help: it escalates to a human with full conversation context and a recommended next step.
+- Sign in / get started: https://xtrac.app/login
