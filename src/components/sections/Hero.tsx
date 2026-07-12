@@ -52,7 +52,7 @@ export function Hero() {
             variant="outline"
             className="w-full border-white/25 bg-white/10 text-white backdrop-blur hover:bg-white/20 hover:text-white sm:w-auto"
           >
-            <a href="/contact">
+            <a href="https://cal.com/anilkumarhm" target="_blank" rel="noopener noreferrer">
               <Icon name="PlayCircle" size={18} strokeWidth={2} />
               Book a demo
             </a>

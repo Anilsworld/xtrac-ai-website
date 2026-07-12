@@ -38,7 +38,7 @@ export function CTA() {
                   variant="outline"
                   className="border-white/30 bg-white/10 text-white hover:bg-white/20"
                 >
-                  <a href="/contact">Book a demo</a>
+                  <a href="https://cal.com/anilkumarhm" target="_blank" rel="noopener noreferrer">Book a demo</a>
                 </Button>
               </div>
               <p className="mt-5 text-sm text-white/70">
