@@ -17,7 +17,7 @@ export function Pillars() {
       <div className="grid gap-6 md:grid-cols-3">
         {PILLARS.map((p, i) => (
           <Reveal key={p.title} delay={i * 0.08}>
-            <Card className="h-full p-7 transition hover:shadow-card-hover hover:-translate-y-0.5">
+            <Card className="card-glow h-full p-7 transition hover:shadow-card-hover hover:-translate-y-0.5">
               <span className="mb-5 grid h-12 w-12 place-items-center rounded-xl bg-accent text-primary ring-1 ring-primary/15">
                 <Icon name={p.icon} size={22} strokeWidth={2} />
               </span>

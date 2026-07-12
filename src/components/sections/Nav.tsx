@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button'
 import { Icon, ThemeToggle, BrandMark } from '@/components/primitives'
 import { cn } from '@/lib/utils'
 
+type NavLink = (typeof NAV_LINKS)[number]
+
 function Wordmark({ light }: { light?: boolean }) {
   return (
     <a href="#top" aria-label="xTrac AI home" className="flex items-center gap-2.5">
@@ -46,16 +48,25 @@ export function Nav() {
       <nav className="container flex h-16 items-center justify-between" aria-label="Primary">
         <Wordmark light={light} />
 
-        <div className="hidden items-center gap-1 lg:flex">
-          {NAV_LINKS.map((l) => (
+        {/* Razorpay-style icon + label menu */}
+        <div className="hidden items-center gap-0.5 lg:flex">
+          {(NAV_LINKS as readonly NavLink[]).map((l) => (
             <a
               key={l.href}
               href={l.href}
               className={cn(
-                'rounded-md px-3.5 py-2 text-sm font-medium transition-colors',
-                light ? 'text-white/80 hover:text-white' : 'text-muted-foreground hover:text-foreground',
+                'inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+                light
+                  ? 'text-white/85 hover:bg-white/10 hover:text-white'
+                  : 'text-muted-foreground hover:bg-accent hover:text-foreground',
               )}
             >
+              <Icon
+                name={l.icon}
+                size={16}
+                strokeWidth={2}
+                className={light ? 'text-white/70' : 'text-primary'}
+              />
               {l.label}
             </a>
           ))}
@@ -105,9 +116,10 @@ export function Nav() {
                   </Dialog.Close>
                 </div>
                 <div className="flex flex-col">
-                  {NAV_LINKS.map((l) => (
+                  {(NAV_LINKS as readonly NavLink[]).map((l) => (
                     <Dialog.Close asChild key={l.href}>
-                      <a href={l.href} className="rounded-lg px-3 py-3 text-base font-medium text-foreground hover:bg-accent">
+                      <a href={l.href} className="flex items-center gap-3 rounded-lg px-3 py-3 text-base font-medium text-foreground hover:bg-accent">
+                        <Icon name={l.icon} size={18} strokeWidth={2} className="text-primary" />
                         {l.label}
                       </a>
                     </Dialog.Close>

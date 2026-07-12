@@ -2,10 +2,10 @@
 // xtrac.app product (iEllipse Technologies). No invented customer metrics.
 
 export const NAV_LINKS = [
-  { label: 'Product', href: '#product' },
-  { label: 'Solutions', href: '#industries' },
-  { label: 'Integrations', href: '#integrations' },
-  { label: 'Pricing', href: '#pricing' },
+  { label: 'Product', href: '#product', icon: 'LayoutGrid' },
+  { label: 'Solutions', href: '#industries', icon: 'Sparkles' },
+  { label: 'Integrations', href: '#integrations', icon: 'Blocks' },
+  { label: 'Pricing', href: '#pricing', icon: 'Tag' },
 ]
 
 export interface Stat {
@@ -26,13 +26,23 @@ export interface Logo {
 // Channels + tools the product works with (real SVGs pulled via 21st search_logo)
 export const TRUST_LOGOS: Logo[] = [
   { name: 'whatsapp', label: 'WhatsApp' },
+  { name: 'instagram', label: 'Instagram' },
   { name: 'slack', label: 'Slack' },
+  { name: 'gmail', label: 'Gmail' },
+  { name: 'salesforce', label: 'Salesforce' },
   { name: 'telegram', label: 'Telegram' },
   { name: 'shopify', label: 'Shopify' },
-  { name: 'gmail', label: 'Gmail' },
+  { name: 'facebook', label: 'Facebook' },
   { name: 'meta', label: 'Meta' },
   { name: 'microsoftteams', label: 'Microsoft Teams' },
+  { name: 'google', label: 'Google' },
+  { name: 'twilio', label: 'Twilio' },
   { name: 'discord', label: 'Discord' },
+  { name: 'azure', label: 'Microsoft Azure' },
+  { name: 'apple', label: 'iMessage' },
+  { name: 'googleanalytics', label: 'Google Analytics' },
+  { name: 'linear', label: 'Linear' },
+  { name: 'posthog', label: 'PostHog' },
 ]
 
 export interface Pillar {
@@ -275,35 +285,62 @@ export const STEPS: Step[] = [
 
 export interface PricingTier {
   name: string
+  eyebrow?: string
   price: string
   cadence?: string
+  priceNote?: string
+  valueLine?: string
   description: string
   cta: string
+  ctaHref?: string
+  ctaNote?: string
   featured?: boolean
   features: string[]
 }
 export const PRICING: PricingTier[] = [
   {
-    name: 'Starter',
+    name: 'Startup',
+    eyebrow: 'For startups',
     price: 'Free',
-    description: 'Launch your first AI agent and see it work.',
-    cta: 'Start free',
-    features: ['1 AI department', 'WhatsApp + web chat', 'Up to 500 conversations/mo', 'Community support'],
-  },
-  {
-    name: 'Growth',
-    price: 'Custom',
-    description: 'A full AI workforce, scoped to your business.',
-    cta: 'Book a demo',
+    cadence: 'for 30 days',
+    priceNote: 'Bring your own AI key (BYOK) — no card to start. $250 / month after trial.',
+    valueLine:
+      'A human hire for even a slice of this starts at $1,200/mo. One flat price for the whole AI team.',
+    description: 'Everything you need to run and grow — one flat price.',
+    cta: 'Start free — 30 days',
+    ctaHref: '/login?intent=demo',
+    ctaNote: 'Set up in under an hour · No developer needed',
     featured: true,
-    features: ['All 8 departments', 'Every channel + voice', 'Unlimited conversations', 'Integrations & automations', 'Priority support'],
+    features: [
+      '1 org user (your login) — unlimited AI employees under it',
+      'Unlimited 24/7 AI employees across every department',
+      'Amazon (Seller + Ads), Shopify & Blinkit (India)',
+      'WhatsApp, Instagram & any email provider — with auto-response',
+      'Full agentic customer-care suite',
+      'ERP integration (SAP, ERPNext & more)',
+      'Microsoft 365 & Google Workspace',
+      'Payment & shipping gateway integrations',
+      'Website analytics, monitoring & agent-driven improvements',
+      'Monthly AI token allowance included (fair-use)',
+      'Live in under an hour — no developer, no agency',
+    ],
   },
   {
     name: 'Enterprise',
-    price: 'Custom',
-    description: 'Security, scale and a dedicated team.',
-    cta: 'Talk to sales',
-    features: ['Everything in Growth', 'SSO & advanced security', 'Dedicated success manager', 'Custom SLAs & onboarding', 'Data residency options'],
+    price: "Let's talk",
+    priceNote: 'Custom pricing for your team size, channels, security and volume.',
+    description: 'On-premise & private-cloud installation, scoped to your org.',
+    cta: 'Contact sales',
+    ctaHref: '/contact',
+    ctaNote: 'Or email support@xtrac.app',
+    features: [
+      'Everything in Startup, unlimited scale',
+      'On-premise or private-cloud deployment',
+      'Data residency, SSO & advanced security',
+      'Dedicated ERP / SAP integration support',
+      'Custom agents & industry workflows',
+      'Priority onboarding & a named success partner',
+    ],
   },
 ]
 

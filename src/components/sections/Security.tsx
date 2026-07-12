@@ -1,16 +1,6 @@
 import { Section, Reveal, Icon } from '@/components/primitives'
-import { Badge } from '@/components/ui/badge'
 import { Card } from '@/components/ui/card'
 import { SECURITY } from '@/lib/content'
-
-const COMPLIANCE = [
-  'GDPR',
-  'DPDP Act 2023',
-  'AES-256',
-  'Meta Tech Partner',
-  'Amazon Solution Provider',
-  'CASA Certified',
-]
 
 export function Security() {
   return (
@@ -35,15 +25,6 @@ export function Security() {
               <p className="mt-1.5 text-sm text-muted-foreground">{s.detail}</p>
             </Card>
           </Reveal>
-        ))}
-      </div>
-
-      <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-        {COMPLIANCE.map((label) => (
-          <Badge key={label} variant="outline">
-            <Icon name="ShieldCheck" size={13} className="text-primary" />
-            {label}
-          </Badge>
         ))}
       </div>
     </Section>

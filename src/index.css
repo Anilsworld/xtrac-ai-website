@@ -128,6 +128,99 @@
   }
 }
 
+/* ── 21st.dev-idiom polish primitives (additive; opt-in per section) ── */
+
+/* Shimmer sweep for primary CTAs (magicui ShimmerButton idiom) */
+@keyframes shine-sweep {
+  0% { transform: translateX(-130%) skewX(-18deg); }
+  100% { transform: translateX(230%) skewX(-18deg); }
+}
+.shine-cta { position: relative; overflow: hidden; }
+.shine-cta::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: translateX(-130%) skewX(-18deg);
+  animation: shine-sweep 3.4s ease-in-out infinite;
+  animation-delay: 1.2s;
+  pointer-events: none;
+}
+
+/* Animated conic gradient border (badge / feature chip idiom) */
+@keyframes border-spin {
+  to { transform: rotate(1turn); }
+}
+.grad-border { position: relative; z-index: 0; }
+.grad-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(from 0deg, transparent, hsl(var(--primary) / 0.9), transparent 30%);
+  animation: border-spin 6s linear infinite;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Ambient aurora glow — soft drifting blobs behind light sections */
+@keyframes aurora-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33% { transform: translate3d(3%, -4%, 0) scale(1.08); }
+  66% { transform: translate3d(-3%, 3%, 0) scale(0.96); }
+}
+.aurora { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.aurora::before,
+.aurora::after {
+  content: '';
+  position: absolute;
+  width: 46rem;
+  height: 46rem;
+  border-radius: 9999px;
+  filter: blur(90px);
+  opacity: 0.5;
+  will-change: transform;
+}
+.aurora::before {
+  top: -22rem;
+  left: -10rem;
+  background: radial-gradient(circle, hsl(var(--primary) / 0.22), transparent 60%);
+  animation: aurora-drift 22s ease-in-out infinite;
+}
+.aurora::after {
+  bottom: -26rem;
+  right: -12rem;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.16), transparent 60%);
+  animation: aurora-drift 26s ease-in-out infinite reverse;
+}
+
+/* Card spotlight — radial highlight that fades in on hover (aceternity idiom) */
+.card-glow { position: relative; }
+.card-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  background: radial-gradient(28rem circle at var(--mx, 50%) var(--my, 0%), hsl(var(--primary) / 0.1), transparent 42%);
+  pointer-events: none;
+}
+.card-glow:hover::before { opacity: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .shine-cta::after,
+  .grad-border::before,
+  .aurora::before,
+  .aurora::after { animation: none; }
+}
+
 @layer utilities {
   .tnum {
     font-variant-numeric: tabular-nums;

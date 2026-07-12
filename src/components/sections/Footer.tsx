@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Reveal, Icon, BrandMark } from '@/components/primitives'
 import { FOOTER } from '@/lib/content'
 
@@ -6,6 +7,51 @@ const SOCIALS = [
   { name: 'Twitter', label: 'Twitter' },
   { name: 'Github', label: 'GitHub' },
 ]
+
+/** Footer label → destination. Internal pages route via <Link>; anchors,
+ *  mailto and external use a plain <a>. Keeps the FOOTER content data
+ *  (page names) untouched. */
+const LINK_MAP: Record<string, string> = {
+  // Product
+  'Get started': '/login',
+  'Sign in': '/login',
+  Integrations: '/#integrations',
+  Pricing: '/#pricing',
+  Changelog: '/changelog',
+  // Solutions
+  Healthcare: '/#healthcare',
+  'E-commerce': '/#ecommerce',
+  Restaurants: '/#restaurant',
+  'Professional services': '/#industries',
+  // Company
+  'About us': '/about',
+  Founders: '/founders',
+  Careers: '/careers',
+  Contact: '/contact',
+  // Legal
+  'Privacy Policy': '/privacy',
+  'Terms of Service': '/terms',
+  'Data Deletion': '/data-deletion',
+  'Help Center': '/help',
+}
+
+function FooterLink({ label }: { label: string }) {
+  const href = LINK_MAP[label] ?? '#'
+  const cls = 'text-sm text-muted-foreground transition-colors hover:text-foreground'
+  // Anchors / mailto / external → plain anchor; internal pages → Link
+  if (href.startsWith('/#') || href.startsWith('mailto:') || href.startsWith('http')) {
+    return (
+      <a href={href} className={cls}>
+        {label}
+      </a>
+    )
+  }
+  return (
+    <Link to={href} className={cls}>
+      {label}
+    </Link>
+  )
+}
 
 export function Footer() {
   return (
@@ -43,12 +89,7 @@ export function Footer() {
                 <ul className="mt-4 space-y-2.5">
                   {col.links.map((link) => (
                     <li key={link}>
-                      <a
-                        href="#"
-                        className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                      >
-                        {link}
-                      </a>
+                      <FooterLink label={link} />
                     </li>
                   ))}
                 </ul>

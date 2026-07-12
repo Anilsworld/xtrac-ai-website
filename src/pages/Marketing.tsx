@@ -1,6 +1,7 @@
 import { Nav } from '@/components/sections/Nav'
 import { Hero } from '@/components/sections/Hero'
 import { LogosStrip } from '@/components/sections/LogosStrip'
+import { TrustMarquee } from '@/components/sections/TrustMarquee'
 import { Pillars } from '@/components/sections/Pillars'
 import { Departments } from '@/components/sections/Departments'
 import { SuperApp } from '@/components/sections/SuperApp'
@@ -21,6 +22,7 @@ export function Marketing() {
       <main>
         <Hero />
         <LogosStrip />
+        <TrustMarquee />
         <Pillars />
         <Departments />
         <SuperApp />

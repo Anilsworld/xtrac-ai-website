@@ -12,3 +12,10 @@ vite.config.js
 vite.config.d.ts
 
 .vercel
+
+# 21st.dev Magic MCP (contains API key — never commit)
+.mcp.json
+.dev.log
+
+# local Claude Code session assets (skills, settings)
+.claude/
