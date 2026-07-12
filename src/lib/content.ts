@@ -19,7 +19,7 @@ export interface Stat {
 export const HERO_STATS: Stat[] = [
   { value: '5 min', label: 'to launch your AI workforce' },
   { value: '24/7', label: 'across every channel' },
-  { value: '8', label: 'departments, working together' },
+  { value: '∞', label: 'AI employees, sized to your business' },
   { value: '10+', label: 'channels, one brain' },
 ]
 
