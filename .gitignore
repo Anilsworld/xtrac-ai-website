@@ -22,3 +22,9 @@ vite.config.d.ts
 
 .vercel
 .env*
+
+# local debug artifacts
+*.mjs
+A-mock.png
+B-live.png
+.bizlogin.png
