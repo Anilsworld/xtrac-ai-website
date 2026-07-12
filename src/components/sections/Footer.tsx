@@ -13,8 +13,8 @@ const SOCIALS = [
  *  (page names) untouched. */
 const LINK_MAP: Record<string, string> = {
   // Product
-  'Get started': '/login',
-  'Sign in': '/login',
+  'Get started': 'https://business.xtrac.app',
+  'Sign in': 'https://business.xtrac.app',
   Integrations: '/#integrations',
   Pricing: '/#pricing',
   Changelog: '/changelog',

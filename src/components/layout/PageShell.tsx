@@ -41,10 +41,10 @@ function PageNav() {
         <div className="flex items-center gap-2">
           <ThemeToggle />
           <Button asChild variant="ghost" size="sm" className="hidden sm:inline-flex">
-            <a href="/login">Sign in</a>
+            <a href="https://business.xtrac.app">Sign in</a>
           </Button>
           <Button asChild size="sm">
-            <a href="/login">
+            <a href="https://business.xtrac.app">
               Get started
               <Icon name="ArrowRight" size={16} strokeWidth={2.4} />
             </a>

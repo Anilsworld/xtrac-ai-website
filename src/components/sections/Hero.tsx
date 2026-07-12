@@ -41,7 +41,7 @@ export function Hero() {
 
         <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row">
           <Button asChild size="lg" className="shine-cta w-full sm:w-auto">
-            <a href="/login">
+            <a href="https://business.xtrac.app">
               Start free
               <Icon name="ArrowRight" size={18} strokeWidth={2.4} />
             </a>
@@ -52,7 +52,7 @@ export function Hero() {
             variant="outline"
             className="w-full border-white/25 bg-white/10 text-white backdrop-blur hover:bg-white/20 hover:text-white sm:w-auto"
           >
-            <a href="/login?intent=demo">
+            <a href="/contact">
               <Icon name="PlayCircle" size={18} strokeWidth={2} />
               Book a demo
             </a>

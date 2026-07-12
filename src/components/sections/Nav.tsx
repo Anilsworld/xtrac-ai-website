@@ -82,10 +82,10 @@ export function Nav() {
             size="sm"
             className={cn('hidden sm:inline-flex', light && 'text-white/90 hover:bg-white/10 hover:text-white')}
           >
-            <a href="/login">Sign in</a>
+            <a href="https://business.xtrac.app">Sign in</a>
           </Button>
           <Button asChild size="sm" className="hidden sm:inline-flex">
-            <a href="/login">
+            <a href="https://business.xtrac.app">
               Get started
               <Icon name="ArrowRight" size={16} strokeWidth={2.4} />
             </a>
@@ -127,10 +127,10 @@ export function Nav() {
                 </div>
                 <div className="mt-4 flex flex-col gap-2 border-t border-border pt-4">
                   <Button asChild variant="outline" className="w-full">
-                    <a href="/login">Sign in</a>
+                    <a href="https://business.xtrac.app">Sign in</a>
                   </Button>
                   <Button asChild className="w-full">
-                    <a href="/login">Get started</a>
+                    <a href="https://business.xtrac.app">Get started</a>
                   </Button>
                 </div>
               </Dialog.Content>

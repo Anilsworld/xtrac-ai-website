@@ -28,7 +28,7 @@ export function CTA() {
               </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <Button asChild size="lg" className="bg-white text-brand-700 hover:bg-white/90">
-                  <a href="#">
+                  <a href="https://business.xtrac.app">
                     Start free <Icon name="ArrowRight" size={18} />
                   </a>
                 </Button>
@@ -38,7 +38,7 @@ export function CTA() {
                   variant="outline"
                   className="border-white/30 bg-white/10 text-white hover:bg-white/20"
                 >
-                  <a href="#">Book a demo</a>
+                  <a href="/contact">Book a demo</a>
                 </Button>
               </div>
               <p className="mt-5 text-sm text-white/70">

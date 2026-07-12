@@ -1,6 +1,10 @@
 // Content model for the xTrac AI professional site. Grounded in the real
 // xtrac.app product (iEllipse Technologies). No invented customer metrics.
 
+/** The real product app — all sign-in / get-started CTAs land here.
+ *  The on-site /login page is a UI demo with no auth backend. */
+export const APP_URL = 'https://business.xtrac.app'
+
 export const NAV_LINKS = [
   { label: 'Product', href: '#product', icon: 'LayoutGrid' },
   { label: 'Solutions', href: '#industries', icon: 'Sparkles' },
@@ -308,7 +312,7 @@ export const PRICING: PricingTier[] = [
       'A human hire for even a slice of this starts at $1,200/mo. One flat price for the whole AI team.',
     description: 'Everything you need to run and grow — one flat price.',
     cta: 'Start free — 30 days',
-    ctaHref: '/login?intent=demo',
+    ctaHref: 'https://business.xtrac.app',
     ctaNote: 'Set up in under an hour · No developer needed',
     featured: true,
     features: [

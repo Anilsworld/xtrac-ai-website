@@ -30,4 +30,4 @@ Key facts:
 - Setup time: about five minutes — describe your business, connect a channel, agents go live.
 - Technical team needed: no, fully no-code.
 - When an agent can't help: it escalates to a human with full conversation context and a recommended next step.
-- Sign in / get started: https://xtrac.app/login
+- Sign in / get started: https://business.xtrac.app
