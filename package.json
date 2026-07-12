@@ -1,0 +1,44 @@
+{
+  "name": "xtrac-pro",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "xTrac AI — professional enterprise-SaaS redesign (light-first, shadcn, WebGL shader hero)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "@fontsource-variable/plus-jakarta-sans": "^5.1.0",
+    "@radix-ui/react-accordion": "^1.2.1",
+    "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@remotion/player": "^4.0.488",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.11.17",
+    "lucide-react": "^0.462.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-icon-cloud": "^4.1.7",
+    "react-router-dom": "^6.30.4",
+    "remotion": "^4.0.488",
+    "tailwind-merge": "^2.5.4",
+    "three": "^0.169.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/three": "^0.169.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "playwright-core": "^1.48.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.15",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}

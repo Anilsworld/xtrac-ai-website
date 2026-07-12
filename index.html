@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f8fafc" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0f1c" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>xTrac AI — Autonomous AI agents that run your business</title>
+    <meta name="application-name" content="xTrac AI" />
+    <meta
+      name="description"
+      content="xTrac deploys autonomous AI agents across sales, support, operations and finance — live on WhatsApp, web and voice. Set up in 5 minutes, no code."
+    />
+    <meta property="og:title" content="xTrac AI — Autonomous AI agents that run your business" />
+    <meta property="og:description" content="One AI workforce for your whole business, across every channel." />
+    <meta property="og:type" content="website" />
+    <script>
+      // Apply saved theme before paint to avoid flash. Default: light (professional).
+      (function () {
+        try {
+          var t = localStorage.getItem('xtrac-theme')
+          if (t === 'dark' || (t === 'system' && matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+          }
+        } catch (e) {}
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
